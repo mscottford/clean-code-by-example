@@ -17,11 +17,16 @@ class Repository {
 
         var data = JSON.parse(request.responseText);
 
+        if (request.status != 200) {
+            throw new Error(data.message);
+        }
+
         this.name = data.name;
-        this.stargazersCount = data.stargazers_count;
-        this.watchersCount = data.watchers_count;
-        this.forksCount = data.forks_count;
-        this.openIssuesCount = data.open_issues_count;
+        this.description = data.description;
+        this.homepage = data.homepage;
+        this.license = data.license.name;
+        this.language = data.language;
+        this.defaultBranch = data.default_branch;
     }
 }
 
