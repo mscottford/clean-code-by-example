@@ -4,7 +4,7 @@ class Person:
       self.email = None
       self.age = None
 
-    def save:
+    def save(self):
       pass
 
 people = [
@@ -18,5 +18,5 @@ for person_attributes in people:
     person.name = person_attributes['name']
     person.email = person_attributes['email']
     person.age = person_attributes['age']
-    person.save
+    person.save()
 
