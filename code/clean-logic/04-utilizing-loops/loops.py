@@ -1,11 +1,15 @@
-class Person:
-    def __init__(self):
-      self.name = None
-      self.email = None
-      self.age = None
+from typing import Optional
 
-    def save(self):
-      pass
+class Person:
+  def __init__(self):
+    self.name: Optional[str] = None
+    self.email: Optional[str] = None
+    self.age: Optional[int] = None
+
+  def save(self):
+    pass
+
+person = Person()
 
 person = Person()
 person.name = "Samantha"
