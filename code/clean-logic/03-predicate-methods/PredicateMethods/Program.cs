@@ -3,21 +3,21 @@ using System.Globalization;
 
 namespace PredicateMethods
 {
-    public class Program
+    public static class Program
     {
+        private const string ValidSentence = "This is a valid sentence.";
+        private const string MissingCapitalLetter = "this should start with a capital letter.";
+        private const string MissingPeriodAtEnd = "This should end in a period";
+        private const string ValidShortCommand = "Shout!";
+        private const string ValidQuestion = "Can I ask you something?";
+
         public static void Main()
         {
-            var validSentence = "This is a valid sentence.";
-            var missingCapitalLetter = "this should start with a capital letter.";
-            var missingPeriodAtEnd = "This should end in a period";
-            var validShortCommand = "Shout!";
-            var validQuestion = "Can I ask you something?";
-
-            PrintValidationStatus(validSentence);
-            PrintValidationStatus(missingCapitalLetter);
-            PrintValidationStatus(missingPeriodAtEnd);
-            PrintValidationStatus(validShortCommand);
-            PrintValidationStatus(validQuestion);
+            PrintValidationStatus(ValidSentence);
+            PrintValidationStatus(MissingCapitalLetter);
+            PrintValidationStatus(MissingPeriodAtEnd);
+            PrintValidationStatus(ValidShortCommand);
+            PrintValidationStatus(ValidQuestion);
         }
 
         private const string SuccessStatus = "\u2705 valid";
@@ -37,7 +37,7 @@ namespace PredicateMethods
             }
 
             var output = $"{status}: {input}";
-            System.Console.WriteLine(output);
+            Console.WriteLine(output);
         }
 
     }
